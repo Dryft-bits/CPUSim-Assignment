@@ -1,0 +1,31 @@
+PTRADD EQU 0x65;
+MEMADD EQU 0x66;
+NEGPTR EQU -0x65;
+addi MEMADD;
+sta PTRADD;
+LOOP1:
+ipa;
+jmpp ADD_TO_ARR;
+jmp ADD_TO_ARR_DONE;
+ADD_TO_ARR:
+sta 0xFF;
+store PTRADD;
+lda PTRADD;
+addi 1;
+sta PTRADD;
+lda 0xFF;
+ADD_TO_ARR_DONE:
+jmpnz LOOP1;
+lda PTRADD;
+addni -1;
+sta PTRADD;
+LOOP2:
+load PTRADD;
+opa;
+lda PTRADD;
+addni -1;
+sta PTRADD;
+addni NEGPTR;
+jmpp LOOP2;
+stop;
+ 
