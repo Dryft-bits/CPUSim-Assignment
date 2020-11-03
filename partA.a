@@ -1,6 +1,7 @@
 PTRADD EQU 0x65;
-MEMADD EQU 0x66;
+ARRADD EQU 0x66;
 NEGPTR EQU -0x65;
+loadreg r1 ARRADD;
 sta PTRADD;
 LOOP1:
 ipa;
@@ -11,20 +12,20 @@ sta 0xFF;
 a2m PTRADD;
 lda PTRADD;
 addi 1;
-sta PTRADD;
-lda 0xFF;
-ADD_TO_ARR_DONE:
-jmpnz LOOP1;
-lda PTRADD;
-addni -1;
-sta PTRADD;
-LOOP2:
-load PTRADD;
-opa;
-lda PTRADD;
-addni -1;
-sta PTRADD;
-addni NEGPTR;
-jmpp LOOP2;
-stop;
- 
+;sta PTRADD;
+;lda 0xFF;
+;ADD_TO_ARR_DONE:
+;jmpnz LOOP1;
+;lda PTRADD;
+;addni -1;
+;sta PTRADD;
+;LOOP2:
+;load PTRADD;
+;opa;
+;lda PTRADD;
+;addni -1;
+;sta PTRADD;
+;addni NEGPTR;
+;jmpp LOOP2;
+;stop;
+; 
