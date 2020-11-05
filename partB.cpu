@@ -1,3 +1,10 @@
+<!-- 
+Aviral Agarwal 2018A7PS0192H
+Shivang Shah 2018A7PS0295H
+Shreyas R 2018A7PS0430H
+Pranay Pant 2018A7PS0161H
+Kushagra Gupta 2018A7PS0208H
+-->
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Machine [
 <!ELEMENT Machine (PunctChar*, Field*, FileChannel*, Register*, RegisterArray*, ConditionBit*, RAM*, Set*, Test*, Increment*, Shift*, Logical*, Arithmetic*, Branch*, TransferRtoR*, TransferRtoA*, TransferAtoR*, Decode*, SetCondBit*, IO*, MemoryAccess*, End, Comment*, EQU*, FetchSequence, MachineInstruction*, HighlightingInfo?, LoadingInfo?, IndexingInfo?, ProgramCounterInfo?, ModuleWindowsInfo?) >

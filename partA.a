@@ -1,8 +1,13 @@
-PTRADD EQU 0x65;
+; Aviral Agarwal 2018A7PS0192H
+; Shivang Shah 2018A7PS0295H
+; Shreyas R 2018A7PS0430H
+; Pranay Pant 2018A7PS0161H
+; Kushagra Gupta 2018A7PS0208H
 ARRADD EQU 0x66;
+PTRADD EQU 0x65;
 PTR: .data 1 PTRADD;
 ONE: .data 1 1;
-addi ARRADD;
+loadi ARRADD;
 sta PTRADD;
 LOOP1:
 ipa;
@@ -12,7 +17,7 @@ ADD_TO_ARR:
 sta 0xFF;
 a2m PTRADD;
 lda PTRADD;
-addi 1;
+add ONE;
 sta PTRADD;
 lda 0xFF;
 ADD_TO_ARR_DONE:
